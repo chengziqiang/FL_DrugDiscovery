@@ -1,13 +1,16 @@
 # Guide
 ---
 We deployed a fedetated learning algorithm on [FATE](https://github.com/FederatedAI/FATE) that can be applied to drug data
+-
+##Install
+*standalone
+download docker image form https://drive.google.com/uc?id=1oErH8t4AHGjzDzhHANDGuTjbiLbgK2Su&export=download
+and run fellowing code
 ```#Get code
-https://drive.google.com/uc?id=1oErH8t4AHGjzDzhHANDGuTjbiLbgK2Su&export=download
-FATE $tar -xvf fate-1.3.0.tar.gz
-
+$ tar -xvf fate-1.3.0.tar.gz
 #Execute the command
-FATE $ cd fate-1.3.0
-FATE $ bash install_standalone_docker.sh
+$ cd fate-1.3.0
+$ bash install_standalone_docker.sh
 
 #Validation results
 FATE $ CONTAINER_ID=`docker ps -aqf "name=fate_python"`
