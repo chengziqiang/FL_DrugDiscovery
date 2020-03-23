@@ -1,5 +1,6 @@
-# FATE Stand-alone Deployment Guide
+# Guide
 ---
+We deployed a fedetated learning algorithm on [FATE](https://github.com/FederatedAI/FATE) that can be applied to drug data
 ```#Get code
 https://drive.google.com/uc?id=1oErH8t4AHGjzDzhHANDGuTjbiLbgK2Su&export=download
 FATE $tar -xvf fate-1.3.0.tar.gz
