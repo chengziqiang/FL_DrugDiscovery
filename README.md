@@ -1,5 +1,5 @@
 ## Install
-### standalone
+##### standalone
 
 download form
  https://drive.google.com/uc?id=1oErH8t4AHGjzDzhHANDGuTjbiLbgK2Su&export=download
@@ -16,7 +16,7 @@ FATE $ CONTAINER_ID=`docker ps -aqf "name=fate_python"`
 FATE $ docker exec -t -i ${CONTAINER_ID} bash
 FATE $ bash ./federatedml/test/run_test.sh
 ```
-### cluster
+##### cluster
 ## Start
 ```
 cd /fate/examples/federatedml-1.x-examples/hetero_nn
