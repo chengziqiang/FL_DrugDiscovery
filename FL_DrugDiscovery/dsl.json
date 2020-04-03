@@ -1,0 +1,61 @@
+{
+  "components": {
+    "dataio_0": {
+      "module": "DataIO",
+      "input": {
+        "data": {
+          "data": [
+            "args.train_data"
+          ]
+        }
+      },
+      "output": {
+        "data": [
+          "train"
+        ],
+        "model": [
+          "dataio"
+        ]
+      }
+    },
+    "dataio_1": {
+      "module": "DataIO",
+      "input": {
+        "data": {
+          "data": [
+            "args.val_data"
+          ]
+        }
+      },
+      "output": {
+        "data": [
+          "train"
+        ],
+        "model": [
+          "dataio1"
+        ]
+      }
+    },
+    "ecfp_nn_0": {
+      "module": "ECFPNN",
+      "input": {
+        "data": {
+          "train_data": [
+            "dataio_0.train"
+          ],
+          "eval_data": [
+            "dataio_1.train"
+          ]
+        }
+      },
+      "output": {
+        "data": [
+          "train"
+        ],
+        "model": [
+          "ecfp_nn"
+        ]
+      }
+    }
+  }
+}

@@ -1,0 +1,158 @@
+{
+  "initiator": {
+    "role": "guest",
+    "party_id": 10000
+  },
+  "job_parameters": {
+    "work_mode": 0
+  },
+  "role": {
+    "guest": [
+      10000
+    ],
+    "host": [
+      10000,9999,9998
+    ],
+    "arbiter": [
+      10000
+    ]
+  },
+  "role_parameters": {
+    "guest": {
+      "args": {
+        "data": {
+          "train_data": [
+            {
+              "name": "solubility_b_train_0",
+              "namespace": "solubility_b_train_0"
+            }
+          ],
+          "val_data": [
+          {
+            "name": "solubility_b_val_0",
+            "namespace": "solubility_b_val_0"
+          }
+        ]
+        }
+
+
+      },
+      "dataio_0": {
+        "with_label": [
+          true
+        ],
+        "label_name": [
+          "y"
+        ],
+        "label_type": [
+          "float"
+        ],
+        "output_format": [
+          "dense"
+        ]
+      },
+      "dataio_1": {
+        "with_label": [
+          true
+        ],
+        "label_name": [
+          "y"
+        ],
+        "label_type": [
+          "float"
+        ],
+        "output_format": [
+          "dense"
+        ]
+      }
+    },
+    "host": {
+      "args": {
+        "data": {
+          "train_data": [
+            {
+              "name": "solubility_a_train_0",
+              "namespace": "solubility_a_train_0"
+            },
+             {
+              "name": "solubility_c_train_0",
+              "namespace": "solubility_c_train_0"
+            },
+             {
+              "name": "solubility_d_train_0",
+              "namespace": "solubility_d_train_0"
+            }
+          ],
+          "val_data": [
+            {
+              "name": "solubility_a_val_0",
+              "namespace": "solubility_a_val_0"
+            },
+             {
+              "name": "solubility_c_val_0",
+              "namespace": "solubility_c_val_0"
+            },
+             {
+              "name": "solubility_d_val_0",
+              "namespace": "solubility_d_val_0"
+            }
+          ]
+        }
+
+      },
+      "dataio_0": {
+        "with_label": [
+          true,true,true
+        ],
+        "label_name": [
+          "y","y","y"
+        ],
+        "label_type": [
+          "float","float","float"
+        ],
+        "output_format": [
+          "dense","dense","dense"
+        ]
+      },
+       "dataio_1": {
+        "with_label": [
+          true,true,true
+        ],
+        "label_name": [
+          "y","y","y"
+        ],
+        "label_type": [
+          "float","float","float"
+        ],
+        "output_format": [
+          "dense","dense","dense"
+        ]
+      }
+    }
+  },
+  "algorithm_parameters": {
+    "ecfp_nn_0": {
+      "task_type": "regression",
+      "config_type": "keras",
+       "nn_define": {"class_name": "Sequential", "config": {"name": "sequential", "layers": [{"class_name": "Dense", "config": {"name": "dense", "trainable": true, "batch_input_shape": [null, 2048], "dtype": "float32", "units": 4096, "activation": "relu", "use_bias": true, "kernel_initializer": {"class_name": "GlorotUniform", "config": {"seed": null, "dtype": "float32"}}, "bias_initializer": {"class_name": "Zeros", "config": {"dtype": "float32"}}, "kernel_regularizer": null, "bias_regularizer": null, "activity_regularizer": null, "kernel_constraint": null, "bias_constraint": null}}, {"class_name": "BatchNormalization", "config": {"name": "batch_normalization", "trainable": true, "dtype": "float32", "axis": [1], "momentum": 0.9, "epsilon": 1e-05, "center": true, "scale": true, "beta_initializer": {"class_name": "Zeros", "config": {"dtype": "float32"}}, "gamma_initializer": {"class_name": "Ones", "config": {"dtype": "float32"}}, "moving_mean_initializer": {"class_name": "Zeros", "config": {"dtype": "float32"}}, "moving_variance_initializer": {"class_name": "Ones", "config": {"dtype": "float32"}}, "beta_regularizer": null, "gamma_regularizer": null, "beta_constraint": null, "gamma_constraint": null}}, {"class_name": "Dense", "config": {"name": "dense_1", "trainable": true, "dtype": "float32", "units": 1024, "activation": "relu", "use_bias": true, "kernel_initializer": {"class_name": "GlorotUniform", "config": {"seed": null, "dtype": "float32"}}, "bias_initializer": {"class_name": "Zeros", "config": {"dtype": "float32"}}, "kernel_regularizer": null, "bias_regularizer": null, "activity_regularizer": null, "kernel_constraint": null, "bias_constraint": null}}, {"class_name": "BatchNormalization", "config": {"name": "batch_normalization_1", "trainable": true, "dtype": "float32", "axis": [1], "momentum": 0.9, "epsilon": 1e-05, "center": true, "scale": true, "beta_initializer": {"class_name": "Zeros", "config": {"dtype": "float32"}}, "gamma_initializer": {"class_name": "Ones", "config": {"dtype": "float32"}}, "moving_mean_initializer": {"class_name": "Zeros", "config": {"dtype": "float32"}}, "moving_variance_initializer": {"class_name": "Ones", "config": {"dtype": "float32"}}, "beta_regularizer": null, "gamma_regularizer": null, "beta_constraint": null, "gamma_constraint": null}}, {"class_name": "Dense", "config": {"name": "dense_2", "trainable": true, "dtype": "float32", "units": 256, "activation": "relu", "use_bias": true, "kernel_initializer": {"class_name": "GlorotUniform", "config": {"seed": null, "dtype": "float32"}}, "bias_initializer": {"class_name": "Zeros", "config": {"dtype": "float32"}}, "kernel_regularizer": null, "bias_regularizer": null, "activity_regularizer": null, "kernel_constraint": null, "bias_constraint": null}}, {"class_name": "BatchNormalization", "config": {"name": "batch_normalization_2", "trainable": true, "dtype": "float32", "axis": [1], "momentum": 0.9, "epsilon": 1e-05, "center": true, "scale": true, "beta_initializer": {"class_name": "Zeros", "config": {"dtype": "float32"}}, "gamma_initializer": {"class_name": "Ones", "config": {"dtype": "float32"}}, "moving_mean_initializer": {"class_name": "Zeros", "config": {"dtype": "float32"}}, "moving_variance_initializer": {"class_name": "Ones", "config": {"dtype": "float32"}}, "beta_regularizer": null, "gamma_regularizer": null, "beta_constraint": null, "gamma_constraint": null}}, {"class_name": "Dropout", "config": {"name": "dropout", "trainable": true, "dtype": "float32", "rate": 0.3, "noise_shape": null, "seed": null}}, {"class_name": "Dense", "config": {"name": "dense_3", "trainable": true, "dtype": "float32", "units": 64, "activation": "relu", "use_bias": true, "kernel_initializer": {"class_name": "GlorotUniform", "config": {"seed": null, "dtype": "float32"}}, "bias_initializer": {"class_name": "Zeros", "config": {"dtype": "float32"}}, "kernel_regularizer": null, "bias_regularizer": null, "activity_regularizer": null, "kernel_constraint": null, "bias_constraint": null}}, {"class_name": "BatchNormalization", "config": {"name": "batch_normalization_3", "trainable": true, "dtype": "float32", "axis": [1], "momentum": 0.9, "epsilon": 1e-05, "center": true, "scale": true, "beta_initializer": {"class_name": "Zeros", "config": {"dtype": "float32"}}, "gamma_initializer": {"class_name": "Ones", "config": {"dtype": "float32"}}, "moving_mean_initializer": {"class_name": "Zeros", "config": {"dtype": "float32"}}, "moving_variance_initializer": {"class_name": "Ones", "config": {"dtype": "float32"}}, "beta_regularizer": null, "gamma_regularizer": null, "beta_constraint": null, "gamma_constraint": null}}, {"class_name": "Dropout", "config": {"name": "dropout_1", "trainable": true, "dtype": "float32", "rate": 0.2, "noise_shape": null, "seed": null}}, {"class_name": "Dense", "config": {"name": "dense_4", "trainable": true, "dtype": "float32", "units": 8, "activation": "relu", "use_bias": true, "kernel_initializer": {"class_name": "GlorotUniform", "config": {"seed": null, "dtype": "float32"}}, "bias_initializer": {"class_name": "Zeros", "config": {"dtype": "float32"}}, "kernel_regularizer": null, "bias_regularizer": null, "activity_regularizer": null, "kernel_constraint": null, "bias_constraint": null}}, {"class_name": "Dense", "config": {"name": "dense_5", "trainable": true, "dtype": "float32", "units": 1, "activation": "linear", "use_bias": true, "kernel_initializer": {"class_name": "GlorotUniform", "config": {"seed": null, "dtype": "float32"}}, "bias_initializer": {"class_name": "Zeros", "config": {"dtype": "float32"}}, "kernel_regularizer": null, "bias_regularizer": null, "activity_regularizer": null, "kernel_constraint": null, "bias_constraint": null}}]}, "keras_version": "2.2.4-tf", "backend": "tensorflow"},
+
+      "batch_size": -1,
+      "optimizer": {
+        "optimizer": "SGD",
+        "learning_rate": 0.001,
+        "momentum": 0.0,
+        "nesterov": false
+      },
+      "early_stop": {
+        "early_stop": "diff",
+        "eps": 1e-6
+      },
+      "loss": "mean_squared_error",
+      "metrics": [
+        "mae",
+        "mse"
+      ],
+      "max_iter": 1000
+    }
+  }
+}

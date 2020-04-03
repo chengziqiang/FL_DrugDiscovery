@@ -1,0 +1,8 @@
+{
+"file":"/fate/examples/data/solubility_F4val.csv", 
+"head":1, 
+"partition":10, 
+"work_mode":0, 
+"table_name":"solubility_F4_val", 
+"namespace":"solubility_F4_val"
+}

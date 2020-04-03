@@ -1,0 +1,21 @@
+{
+    "module_path":  "federatedml/nn/ecfp_nn",
+    "default_runtime_conf": "ecfp_nn_param.json",
+    "param_class" : "federatedml/param/ecfp_nn_param.py/ECFPNNParam",
+    "role":
+    {
+        "guest":
+        {
+            "program": "enter_point.py/ECFPNNGuest"
+        },
+        "host":
+        {
+            "program": "enter_point.py/ECFPNNHost"
+        },
+        "arbiter":
+        {
+            "program": "enter_point.py/ECFPNNArbiter"
+        }
+    }
+}
+
