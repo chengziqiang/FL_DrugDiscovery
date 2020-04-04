@@ -24,7 +24,7 @@ from federatedml.model_base import ModelBase
 from federatedml.nn.ecfp_nn import nn_model
 from federatedml.nn.ecfp_nn.nn_model import restore_nn_model
 from federatedml.optim.convergence import converge_func_factory
-from federatedml.param.ecfp_nn import ECFPNNParam
+from federatedml.param.ecfp_nn_param import ECFPNNParam
 from federatedml.transfer_variable.transfer_class.ecfp_transfer_variable import ECFPTransferVariable
 from federatedml.util import consts
 import os
@@ -194,15 +194,15 @@ class ECFPNNClient(ECFPNNBase):
         return _build_model_dict(meta=self._get_meta(), param=self._get_param())
 
     def _get_meta(self):
-        from federatedml.protobuf.generated import nn_model_meta_pb2
-        meta_pb = nn_model_meta_pb2.NNModelMeta()
+        from federatedml.protobuf.generated import ecfp_nn_model_meta_pb2
+        meta_pb = ecfp_nn_model_meta_pb2.NNModelMeta()
         meta_pb.params.CopyFrom(self.model_param.generate_pb())
         meta_pb.aggregate_iter = self.aggregator_iter
         return meta_pb
 
     def _get_param(self):
-        from federatedml.protobuf.generated import nn_model_param_pb2
-        param_pb = nn_model_param_pb2.NNModelParam()
+        from federatedml.protobuf.generated import ecfp_nn_model_param_pb2
+        param_pb = ecfp_nn_model_param_pb2.NNModelParam()
         param_pb.saved_model_bytes = self.nn_model.export_model()
         return param_pb
 
