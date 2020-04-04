@@ -16,10 +16,10 @@ _sym_db = _symbol_database.Default()
 
 DESCRIPTOR = _descriptor.FileDescriptor(
   name='ecfp-nn-model-meta.proto',
-  package='com.webank.ai.fate.core.mlmodel.buffer',
+  package='ecfp',
   syntax='proto3',
   serialized_options=_b('B\020NNModelMetaProto'),
-  serialized_pb=_b('\n\x18\x65\x63\x66p-nn-model-meta.proto\x12&com.webank.ai.fate.core.mlmodel.buffer\",\n\tEarlyStop\x12\x12\n\nearly_stop\x18\x01 \x01(\t\x12\x0b\n\x03\x65ps\x18\x02 \x01(\x01\",\n\tOptimizer\x12\x11\n\toptimizer\x18\x01 \x01(\t\x12\x0c\n\x04\x61rgs\x18\x02 \x01(\t\"\xd5\x02\n\x0b\x45\x43\x46PNNParam\x12\x18\n\x10secure_aggregate\x18\x01 \x01(\x08\x12\x1f\n\x17\x61ggregate_every_n_epoch\x18\x02 \x01(\x05\x12\x13\n\x0b\x63onfig_type\x18\x03 \x01(\t\x12\x11\n\tnn_define\x18\x04 \x03(\t\x12\x12\n\nbatch_size\x18\x05 \x01(\x05\x12\x10\n\x08max_iter\x18\x06 \x01(\x05\x12\x45\n\nearly_stop\x18\x07 \x01(\x0b\x32\x31.com.webank.ai.fate.core.mlmodel.buffer.EarlyStop\x12\x0f\n\x07metrics\x18\x08 \x03(\t\x12\x44\n\toptimizer\x18\t \x01(\x0b\x32\x31.com.webank.ai.fate.core.mlmodel.buffer.Optimizer\x12\x0c\n\x04loss\x18\n \x01(\t\x12\x11\n\ttask_type\x18\x0b \x01(\t\"j\n\x0bNNModelMeta\x12\x16\n\x0e\x61ggregate_iter\x18\x01 \x01(\x05\x12\x43\n\x06params\x18\x64 \x01(\x0b\x32\x33.com.webank.ai.fate.core.mlmodel.buffer.ECFPNNParamB\x12\x42\x10NNModelMetaProtob\x06proto3')
+  serialized_pb=_b('\n\x18\x65\x63\x66p-nn-model-meta.proto\x12\x04\x65\x63\x66p\",\n\tEarlyStop\x12\x12\n\nearly_stop\x18\x01 \x01(\t\x12\x0b\n\x03\x65ps\x18\x02 \x01(\x01\",\n\tOptimizer\x12\x11\n\toptimizer\x18\x01 \x01(\t\x12\x0c\n\x04\x61rgs\x18\x02 \x01(\t\"\x91\x02\n\x0b\x45\x43\x46PNNParam\x12\x18\n\x10secure_aggregate\x18\x01 \x01(\x08\x12\x1f\n\x17\x61ggregate_every_n_epoch\x18\x02 \x01(\x05\x12\x13\n\x0b\x63onfig_type\x18\x03 \x01(\t\x12\x11\n\tnn_define\x18\x04 \x03(\t\x12\x12\n\nbatch_size\x18\x05 \x01(\x05\x12\x10\n\x08max_iter\x18\x06 \x01(\x05\x12#\n\nearly_stop\x18\x07 \x01(\x0b\x32\x0f.ecfp.EarlyStop\x12\x0f\n\x07metrics\x18\x08 \x03(\t\x12\"\n\toptimizer\x18\t \x01(\x0b\x32\x0f.ecfp.Optimizer\x12\x0c\n\x04loss\x18\n \x01(\t\x12\x11\n\ttask_type\x18\x0b \x01(\t\"H\n\x0bNNModelMeta\x12\x16\n\x0e\x61ggregate_iter\x18\x01 \x01(\x05\x12!\n\x06params\x18\x64 \x01(\x0b\x32\x11.ecfp.ECFPNNParamB\x12\x42\x10NNModelMetaProtob\x06proto3')
 )
 
 
@@ -27,20 +27,20 @@ DESCRIPTOR = _descriptor.FileDescriptor(
 
 _EARLYSTOP = _descriptor.Descriptor(
   name='EarlyStop',
-  full_name='com.webank.ai.fate.core.mlmodel.buffer.EarlyStop',
+  full_name='ecfp.EarlyStop',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   fields=[
     _descriptor.FieldDescriptor(
-      name='early_stop', full_name='com.webank.ai.fate.core.mlmodel.buffer.EarlyStop.early_stop', index=0,
+      name='early_stop', full_name='ecfp.EarlyStop.early_stop', index=0,
       number=1, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='eps', full_name='com.webank.ai.fate.core.mlmodel.buffer.EarlyStop.eps', index=1,
+      name='eps', full_name='ecfp.EarlyStop.eps', index=1,
       number=2, type=1, cpp_type=5, label=1,
       has_default_value=False, default_value=float(0),
       message_type=None, enum_type=None, containing_type=None,
@@ -58,27 +58,27 @@ _EARLYSTOP = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=68,
-  serialized_end=112,
+  serialized_start=34,
+  serialized_end=78,
 )
 
 
 _OPTIMIZER = _descriptor.Descriptor(
   name='Optimizer',
-  full_name='com.webank.ai.fate.core.mlmodel.buffer.Optimizer',
+  full_name='ecfp.Optimizer',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   fields=[
     _descriptor.FieldDescriptor(
-      name='optimizer', full_name='com.webank.ai.fate.core.mlmodel.buffer.Optimizer.optimizer', index=0,
+      name='optimizer', full_name='ecfp.Optimizer.optimizer', index=0,
       number=1, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='args', full_name='com.webank.ai.fate.core.mlmodel.buffer.Optimizer.args', index=1,
+      name='args', full_name='ecfp.Optimizer.args', index=1,
       number=2, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
@@ -96,90 +96,90 @@ _OPTIMIZER = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=114,
-  serialized_end=158,
+  serialized_start=80,
+  serialized_end=124,
 )
 
 
 _ECFPNNPARAM = _descriptor.Descriptor(
   name='ECFPNNParam',
-  full_name='com.webank.ai.fate.core.mlmodel.buffer.ECFPNNParam',
+  full_name='ecfp.ECFPNNParam',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   fields=[
     _descriptor.FieldDescriptor(
-      name='secure_aggregate', full_name='com.webank.ai.fate.core.mlmodel.buffer.ECFPNNParam.secure_aggregate', index=0,
+      name='secure_aggregate', full_name='ecfp.ECFPNNParam.secure_aggregate', index=0,
       number=1, type=8, cpp_type=7, label=1,
       has_default_value=False, default_value=False,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='aggregate_every_n_epoch', full_name='com.webank.ai.fate.core.mlmodel.buffer.ECFPNNParam.aggregate_every_n_epoch', index=1,
+      name='aggregate_every_n_epoch', full_name='ecfp.ECFPNNParam.aggregate_every_n_epoch', index=1,
       number=2, type=5, cpp_type=1, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='config_type', full_name='com.webank.ai.fate.core.mlmodel.buffer.ECFPNNParam.config_type', index=2,
+      name='config_type', full_name='ecfp.ECFPNNParam.config_type', index=2,
       number=3, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='nn_define', full_name='com.webank.ai.fate.core.mlmodel.buffer.ECFPNNParam.nn_define', index=3,
+      name='nn_define', full_name='ecfp.ECFPNNParam.nn_define', index=3,
       number=4, type=9, cpp_type=9, label=3,
       has_default_value=False, default_value=[],
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='batch_size', full_name='com.webank.ai.fate.core.mlmodel.buffer.ECFPNNParam.batch_size', index=4,
+      name='batch_size', full_name='ecfp.ECFPNNParam.batch_size', index=4,
       number=5, type=5, cpp_type=1, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='max_iter', full_name='com.webank.ai.fate.core.mlmodel.buffer.ECFPNNParam.max_iter', index=5,
+      name='max_iter', full_name='ecfp.ECFPNNParam.max_iter', index=5,
       number=6, type=5, cpp_type=1, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='early_stop', full_name='com.webank.ai.fate.core.mlmodel.buffer.ECFPNNParam.early_stop', index=6,
+      name='early_stop', full_name='ecfp.ECFPNNParam.early_stop', index=6,
       number=7, type=11, cpp_type=10, label=1,
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='metrics', full_name='com.webank.ai.fate.core.mlmodel.buffer.ECFPNNParam.metrics', index=7,
+      name='metrics', full_name='ecfp.ECFPNNParam.metrics', index=7,
       number=8, type=9, cpp_type=9, label=3,
       has_default_value=False, default_value=[],
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='optimizer', full_name='com.webank.ai.fate.core.mlmodel.buffer.ECFPNNParam.optimizer', index=8,
+      name='optimizer', full_name='ecfp.ECFPNNParam.optimizer', index=8,
       number=9, type=11, cpp_type=10, label=1,
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='loss', full_name='com.webank.ai.fate.core.mlmodel.buffer.ECFPNNParam.loss', index=9,
+      name='loss', full_name='ecfp.ECFPNNParam.loss', index=9,
       number=10, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='task_type', full_name='com.webank.ai.fate.core.mlmodel.buffer.ECFPNNParam.task_type', index=10,
+      name='task_type', full_name='ecfp.ECFPNNParam.task_type', index=10,
       number=11, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
@@ -197,27 +197,27 @@ _ECFPNNPARAM = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=161,
-  serialized_end=502,
+  serialized_start=127,
+  serialized_end=400,
 )
 
 
 _NNMODELMETA = _descriptor.Descriptor(
   name='NNModelMeta',
-  full_name='com.webank.ai.fate.core.mlmodel.buffer.NNModelMeta',
+  full_name='ecfp.NNModelMeta',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   fields=[
     _descriptor.FieldDescriptor(
-      name='aggregate_iter', full_name='com.webank.ai.fate.core.mlmodel.buffer.NNModelMeta.aggregate_iter', index=0,
+      name='aggregate_iter', full_name='ecfp.NNModelMeta.aggregate_iter', index=0,
       number=1, type=5, cpp_type=1, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='params', full_name='com.webank.ai.fate.core.mlmodel.buffer.NNModelMeta.params', index=1,
+      name='params', full_name='ecfp.NNModelMeta.params', index=1,
       number=100, type=11, cpp_type=10, label=1,
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
@@ -235,8 +235,8 @@ _NNMODELMETA = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=504,
-  serialized_end=610,
+  serialized_start=402,
+  serialized_end=474,
 )
 
 _ECFPNNPARAM.fields_by_name['early_stop'].message_type = _EARLYSTOP
@@ -251,32 +251,31 @@ _sym_db.RegisterFileDescriptor(DESCRIPTOR)
 EarlyStop = _reflection.GeneratedProtocolMessageType('EarlyStop', (_message.Message,), dict(
   DESCRIPTOR = _EARLYSTOP,
   __module__ = 'ecfp_nn_model_meta_pb2'
-  # @@protoc_insertion_point(class_scope:com.webank.ai.fate.core.mlmodel.buffer.EarlyStop)
+  # @@protoc_insertion_point(class_scope:ecfp.EarlyStop)
   ))
 _sym_db.RegisterMessage(EarlyStop)
 
 Optimizer = _reflection.GeneratedProtocolMessageType('Optimizer', (_message.Message,), dict(
   DESCRIPTOR = _OPTIMIZER,
   __module__ = 'ecfp_nn_model_meta_pb2'
-  # @@protoc_insertion_point(class_scope:com.webank.ai.fate.core.mlmodel.buffer.Optimizer)
+  # @@protoc_insertion_point(class_scope:ecfp.Optimizer)
   ))
 _sym_db.RegisterMessage(Optimizer)
 
 ECFPNNParam = _reflection.GeneratedProtocolMessageType('ECFPNNParam', (_message.Message,), dict(
   DESCRIPTOR = _ECFPNNPARAM,
   __module__ = 'ecfp_nn_model_meta_pb2'
-  # @@protoc_insertion_point(class_scope:com.webank.ai.fate.core.mlmodel.buffer.ECFPNNParam)
+  # @@protoc_insertion_point(class_scope:ecfp.ECFPNNParam)
   ))
 _sym_db.RegisterMessage(ECFPNNParam)
 
 NNModelMeta = _reflection.GeneratedProtocolMessageType('NNModelMeta', (_message.Message,), dict(
   DESCRIPTOR = _NNMODELMETA,
   __module__ = 'ecfp_nn_model_meta_pb2'
-  # @@protoc_insertion_point(class_scope:com.webank.ai.fate.core.mlmodel.buffer.NNModelMeta)
+  # @@protoc_insertion_point(class_scope:ecfp.NNModelMeta)
   ))
 _sym_db.RegisterMessage(NNModelMeta)
 
 
 DESCRIPTOR._options = None
 # @@protoc_insertion_point(module_scope)
-

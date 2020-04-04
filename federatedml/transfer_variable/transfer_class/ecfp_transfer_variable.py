@@ -52,4 +52,3 @@ class ECFPTransferVariable(BaseTransferVariables):
         self.to_encrypt_model = self._create_variable(name='to_encrypt_model')
         self.use_encrypt = self._create_variable(name='use_encrypt')
         self.uuid_conflict_flag = self._create_variable(name='uuid_conflict_flag')
-

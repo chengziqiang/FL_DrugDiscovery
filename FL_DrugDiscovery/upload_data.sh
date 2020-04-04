@@ -1,3 +1,4 @@
+#!/bin/bash
 data_path='\/fate\/examples\/data\/solubility\/'
 client_arr=('F1' 'F2' 'F3' 'F4')
 type_arr=('train' 'val')

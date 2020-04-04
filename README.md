@@ -1,26 +1,48 @@
-## Install
-#### standalone
+# FL DrugDiscovery Deployment Guide
+We deployed a model for predicting drug solubility on [FATE](https://github.com/FederatedAI/FATE) 
+## Quick Start
+### 1. Install FATE
+FATE can be installed on Linux or Mac. Now, FATE can support：
+* Native installation: standalone and cluster deployments;
+* KubeFATE installation:
+    * Multipal parties deployment by docker-compose, which for devolopment and test purpose;
+    * Cluster (multi-node) deployment by Kubernetes
 
-download form
- https://drive.google.com/uc?id=1xU6YEt9pazogKn_tydBG2MR1E3TLriGz&export=download
-and run following code
-```
-#Get code
-$ tar -xvf fate-1.3.0.tar.gz
-#Execute the command
-$ cd fate-1.3.0
-$ bash install_standalone_docker.sh
+#### Native installation:
+Software environment :jdk1.8+、Python3.6、python virtualenv、mysql5.6+、redis-5.0.2
 
-#Validation results
-FATE $ CONTAINER_ID=`docker ps -aqf "name=fate_python"`
-FATE $ docker exec -t -i ${CONTAINER_ID} bash
-FATE $ bash ./federatedml/test/run_test.sh
+##### Standalone
+FATE provides Standalone runtime architecture for developers. It can help developers quickly test FATE. Standalone support two types of deployment: Docker version and Manual version. Please refer to Standalone deployment guide: [standalone-deploy](https://github.com/FederatedAI/FATE/tree/master/standalone-deploy)
+
+##### Cluster
+FATE also provides a distributed runtime architecture for Big Data scenario. Migration from standalone to cluster requires configuration change only. No algorithm change is needed.
+
+To deploy FATE on a cluster, please refer to cluster deployment guide: [cluster-deploy](https://github.com/FederatedAI/FATE/tree/master/cluster-deploy) .
+
+##### Running Tests
+
+A script to run all the unittests has been provided in ./federatedml/test folder.
+
+Once FATE is installed, tests can be run using:
+
+`sh ./federatedml/test/run_test.sh`
+
+All the unittests shall pass if FATE is installed properly.
+
+### 2. Deploy FL_DrugDiscovery Model 
+#### Deploy model
 ```
-#### cluster
-## Start
+$ cd /${FATE path}    
+$ git https://github.com/chengziqiang/FL_DrugDiscovery
+$ sh ./deploy.sh
 ```
-cd /fate/examples/federatedml-1.x-examples/hetero_nn
-python upload_data.py
-python /fate/fate_flow/fate_flow_client.py -f submit_job -d dsl.json -c runtime.json
+#### Upload data and train model
 ```
-model saved  in /fate/model
+$ cd /${FATE path}/examples/federatedml-1.x-examples/FL_DrugDiscovery
+$ sh ./upload_data.sh
+$ python /${FATE path}/fate_flow/fate_flow_client.py -f submit_job -d dsl.json -c runtime.json
+```
+you can check running status of model at [FATEboard](https://fate.fedai.org/fateboard/) that is a suite of visualization tool of FATE
+#### Test model
+
+model saved  in `/fate/model/${job ID}/`

@@ -23,14 +23,14 @@
         "data": {
           "train_data": [
             {
-              "name": "solubility_b_train_0",
-              "namespace": "solubility_b_train_0"
+              "name": "solubility_F2_train",
+              "namespace": "solubility_F2_train"
             }
           ],
           "val_data": [
           {
-            "name": "solubility_b_val_0",
-            "namespace": "solubility_b_val_0"
+            "name": "solubility_F2_val",
+            "namespace": "solubility_F2_val"
           }
         ]
         }
@@ -71,30 +71,30 @@
         "data": {
           "train_data": [
             {
-              "name": "solubility_a_train_0",
-              "namespace": "solubility_a_train_0"
+              "name": "solubility_F1_train",
+              "namespace": "solubility_F1_train"
             },
              {
-              "name": "solubility_c_train_0",
-              "namespace": "solubility_c_train_0"
+              "name": "solubility_F2_train",
+              "namespace": "solubility_F2_train"
             },
              {
-              "name": "solubility_d_train_0",
-              "namespace": "solubility_d_train_0"
+              "name": "solubility_F4_train",
+              "namespace": "solubility_F4_train"
             }
           ],
           "val_data": [
             {
-              "name": "solubility_a_val_0",
-              "namespace": "solubility_a_val_0"
+              "name": "solubility_F1_val",
+              "namespace": "solubility_F1_val"
             },
              {
-              "name": "solubility_c_val_0",
-              "namespace": "solubility_c_val_0"
+              "name": "solubility_F3_val",
+              "namespace": "solubility_F3_val"
             },
              {
-              "name": "solubility_d_val_0",
-              "namespace": "solubility_d_val_0"
+              "name": "solubility_F4_val",
+              "namespace": "solubility_F4_val"
             }
           ]
         }
